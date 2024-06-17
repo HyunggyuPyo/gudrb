@@ -811,7 +811,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 118092686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1875355706}
+        m_TargetAssemblyTypeName: Example0617, Assembly-CSharp
+        m_MethodName: EtcButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &118092686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1195,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 267920420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1875355706}
+        m_TargetAssemblyTypeName: Example0617, Assembly-CSharp
+        m_MethodName: WeaponButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &267920420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3426,6 +3450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc13cdc3010f4f4a8deeb58e4325ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wcolor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1894661571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,7 +3534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1894661574}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1875355706}
+        m_TargetAssemblyTypeName: Example0617, Assembly-CSharp
+        m_MethodName: ExpendablesButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1894661574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4015,7 +4052,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2018976411}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1875355706}
+        m_TargetAssemblyTypeName: Example0617, Assembly-CSharp
+        m_MethodName: EquipmentButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2018976411
 MonoBehaviour:
   m_ObjectHideFlags: 0

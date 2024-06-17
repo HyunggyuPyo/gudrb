@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acb02b784c6bee478e238fd86abd545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  imgSprite: {fileID: 0}
   classification:
   - "\uAE30\uD0C0"
   - "\uC18C\uBAA8\uD488"
