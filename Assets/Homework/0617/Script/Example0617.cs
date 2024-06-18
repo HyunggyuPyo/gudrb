@@ -18,53 +18,32 @@ public class Example0617 : MonoBehaviour
         inven = new List<GameObject>();
         InvenImage();
     }
-    
-    public void WeaponButtonClick()
+
+    private void Start()
     {
         ColorBack();
-        List<GameObject> evenList = inven.FindAll(IsWeapon);
-        foreach (GameObject obj in evenList)
-        {
-            Color itemColor = obj.GetComponent<SpriteRenderer>().color;
-            itemColor.a = 0.5f;
-            obj.GetComponent<SpriteRenderer>().color = itemColor;
-            print($"현재 {obj.name}의 색은 {itemColor}입니다.");
-            InvenImage();
-        }
     }
 
-    public void EquipmentButtonClick()
+    public void SwitchButton(int i)
     {
         ColorBack();
-        List<GameObject> evenList = inven.FindAll(IsEquipment);
-        foreach (GameObject obj in evenList)
+        List<GameObject> evenList = new List<GameObject>(); 
+        switch (i)
         {
-            Color itemColor = obj.GetComponent<SpriteRenderer>().color;
-            itemColor.a = 0.5f;
-            obj.GetComponent<SpriteRenderer>().color = itemColor;
-            print($"현재 {obj.name}의 색은 {itemColor}입니다.");
-            InvenImage();
-        }
-    }
+            case 0:
+                evenList = inven.FindAll(IsWeapon);
+                break;
+            case 1:
+                evenList = inven.FindAll(IsEquipment);
+                break;
+            case 2:
+                evenList = inven.FindAll(IsExpendables);
+                break;
+            case 3:
+                evenList = inven.FindAll(IsEtc);
+                break;
 
-    public void ExpendablesButtonClick()
-    {
-        ColorBack();
-        List<GameObject> evenList = inven.FindAll(IsExpendables);
-        foreach (GameObject obj in evenList)
-        {
-            Color itemColor = obj.GetComponent<SpriteRenderer>().color;
-            itemColor.a = 0.5f;
-            obj.GetComponent<SpriteRenderer>().color = itemColor;
-            print($"현재 {obj.name}의 색은 {itemColor}입니다.");
-            InvenImage();
         }
-    }
-
-    public void EtcButtonClick()
-    {
-        ColorBack();
-        List<GameObject> evenList = inven.FindAll(IsEtc);
         foreach (GameObject obj in evenList)
         {
             Color itemColor = obj.GetComponent<SpriteRenderer>().color;
