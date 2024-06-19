@@ -22,14 +22,19 @@ public class Example0618 : MonoBehaviour
         switch(i)
         {
             case 0:
+                ItemFilesLoad("»≠ªÏ");
                 break;
             case 1:
+                ItemFilesLoad("µµ≥¢");
                 break;
             case 2:
+                ItemFilesLoad("∏¡≈‰");
                 break;
             case 3:
+                ItemFilesLoad("µø¿¸");
                 break;
             case 4:
+                ItemFilesLoad("πÊ∆–");
                 break;
         }
     }
@@ -55,7 +60,7 @@ public class Example0618 : MonoBehaviour
         }
     }
 
-    public void ItemFilesLoad()
+    public void ItemFilesLoad(string fileName)
     {
         readFromJson.Clear();
 
@@ -63,12 +68,17 @@ public class Example0618 : MonoBehaviour
 
         foreach (FileInfo file in di.GetFiles())
         {
-            string path = $"{Application.streamingAssetsPath}/{file.Name}";
-
-            if (File.Exists(path) && file.Extension == ".json")
+            if(file.Name == $"{fileName}_ItemData.json")
             {
-                string json = File.ReadAllText(path);
-                readFromJson.Add(JsonUtility.FromJson<ItemData>(json));
+                string path = $"{Application.streamingAssetsPath}/{file.Name}";
+
+                if (File.Exists(path) && file.Extension == ".json")
+                {
+                    string json = File.ReadAllText(path);
+                    readFromJson.Add(JsonUtility.FromJson<ItemData>(json));
+                    
+                    GetItemInfo(JsonUtility.FromJson<ItemData>(json));
+                }
             }
         }
     }
