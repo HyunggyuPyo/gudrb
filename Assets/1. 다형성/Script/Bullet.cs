@@ -9,8 +9,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // 크리거 안에 들어온 다른 객체의 Layer가 targetLayer와 다른 레이어면 무시
-        if((targetLayer | (1 << other.gameObject.layer)) != targetLayer)
+        //bullet.targetLayer = (1 << LayerMask.NameToLayer("Box")) + (1 << LayerMask.NameToLayer("Monster"));
+        // 트리거 안에 들어온 다른 객체의 Layer가 targetLayer와 다른 레이어면 무시
+        if ((targetLayer | (1 << other.gameObject.layer)) != targetLayer)
         {
             return;
         }
