@@ -27,7 +27,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        EquipSlot.a a = new EquipSlot.b();
+        //EquipSlot.a a = new EquipSlot.b();
 
         //tempItems 리스트에 tempWeapons요소들을 0번 인덱스부터 삽입
         tempItems.InsertRange(0, tempWeapons);

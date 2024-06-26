@@ -36,31 +36,58 @@ public class SkillInventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!hasSkill) return;
+        if (!hasSkill)
+        {
+            return;
+        }
 
         iconImage.rectTransform.position = eventData.position;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (!hasSkill) return;
+        if (!hasSkill)
+        {
+            return;
+        }
 
+        iconImage.rectTransform.SetParent(SkillManager.Instance.skillPage);
+
+        SkillManager.Instance.selectedSlot = this;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (!hasSkill) return;
+        if (!hasSkill)
+        {
+            return;
+        }
 
-        iconImage.rectTransform.SetParent(SkillManager.Instance.skillPage);
+        if(SkillManager.Instance.focusedSlot != this && SkillManager.Instance.focusedSlot != null)
+        {
+            SkillInventorySlot targetSlot = SkillManager.Instance.focusedSlot;
+
+            Skill tempSkill = targetSlot.Skill;
+
+            targetSlot.Skill = skill;
+
+            this.Skill = tempSkill;
+        }
+
+        SkillManager.Instance.selectedSlot = null;
+
+        iconImage.rectTransform.SetParent(transform);
+
+        iconImage.rectTransform.anchoredPosition = Vector2.zero;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
+        SkillManager.Instance.focusedSlot = this;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        
+        SkillManager.Instance.focusedSlot = null;
     }
 }

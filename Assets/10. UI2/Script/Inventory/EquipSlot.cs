@@ -4,21 +4,21 @@ using UnityEngine.UI;
 public class EquipSlot : InventorySlot
 {
 
-    public class a
-    {
-        public virtual void DoA()
-        {
-            Debug.Log("Do A");
-        }
-    }
+    //public class a
+    //{
+    //    public virtual void DoA()
+    //    {
+    //        Debug.Log("Do A");
+    //    }
+    //}
 
-    public class b : a
-    {
-        public override void DoA()
-        {
-            Debug.Log("Actually Do B");
-        }
-    }
+    //public class b : a
+    //{
+    //    public override void DoA()
+    //    {
+    //        Debug.Log("Actually Do B");
+    //    }
+    //}
 
     public Image defaultIconImage; // 아이템을 장착 안 했을때 보여줄 아이콘
     public PlayerEquip playerEquip;
@@ -27,12 +27,12 @@ public class EquipSlot : InventorySlot
     //set item을 할때 
     //item propertie에 값을 대입할때의 로직을 수정
 
-    private void Start()
-    {
-        a a = new b();
+    //private void Start()
+    //{
+    //    a a = new b();
 
-        a.DoA();
-    }
+    //    a.DoA();
+    //}
 
     public override Item Item 
     { 
